@@ -22,6 +22,6 @@ public class Notes {
 	@OneToOne
 	private Recipe recipe;
 	@Lob
-	private String notes;
+	private String recipeNotes;
 
 }

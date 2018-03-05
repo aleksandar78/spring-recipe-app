@@ -25,6 +25,11 @@ public class RecipeServiceImpl implements RecipeService{
 		log.debug("Simple slf4j facade logger");
 		return StreamSupport.stream(repository.findAll().spliterator(), false).collect(Collectors.toList());
 	}
+
+	@Override
+	public Recipe findById(Long id) {
+		return repository.findById(id).orElseThrow(() -> new RuntimeException("No recipe found"));
+	}
 	
 	
 }

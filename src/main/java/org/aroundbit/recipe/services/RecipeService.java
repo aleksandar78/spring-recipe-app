@@ -7,4 +7,6 @@ import org.aroundbit.recipe.domain.Recipe;
 public interface RecipeService {
 
 	List<Recipe> getRecipes();
+	
+	Recipe findById(Long id);
 }
